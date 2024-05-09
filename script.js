@@ -16,9 +16,22 @@ numberBtns.addEventListener("click", (event) => {
     if (accumulator === "0"){
         accumulator = "";
     }
+
+    // limits input to only contain one decimal point
     if (target === "." && accumulator.includes(".")){
         return
     }
+
+    // limits length of input so it doesn't over flow the display
+    if (accumulator > 100000000){
+        return
+    } else if (accumulator.includes(".")){
+        stringAccumulator = accumulator.toString();
+        if (stringAccumulator.length > 9){
+            return
+        }
+    }
+
     accumulator += target;
     display.textContent = accumulator;
 });
