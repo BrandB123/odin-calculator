@@ -24,6 +24,8 @@ numberBtns.addEventListener("click", (event) => {
 clearBtn.addEventListener("click", () => {
     accumulator = "0";
     display.textContent = accumulator;
+    x = 0;
+    y = 0;
 });
 
 
