@@ -25,6 +25,7 @@ body {
     min-height: 400px;
     max-height: 450px;
     min-width: 300px;
+    max-width: 350px;
     background-color: #646464;
     box-shadow: 0 0 10px rgb(0, 0, 0, 50%);
     gap: 10px;
