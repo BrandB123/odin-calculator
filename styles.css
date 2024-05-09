@@ -97,7 +97,6 @@ button {
     justify-content: center;
     align-items: center;
     flex: auto; 
-    /*padding: 10px;*/
     font-size: 24px;
     border: 2px solid black;
     border-radius: 5px;
@@ -112,7 +111,6 @@ button {
 }
 
 .clear-btn, .equal-btn {
-    /*background-color: #1268e8;*/
     background-color: #3d3f43;
     color: white;
 }
