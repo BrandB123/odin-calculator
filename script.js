@@ -1,18 +1,53 @@
 let x;
 let y;
 let operator;
+let accumulator = "";
 
-// button eventListeners
-let number = document.querySelector(".number");
 
-mainContainer.addEventListener("click", (event) => {
-    let target = event.target.id;
+let display = document.querySelector(".display");
+let numberBtns = document.querySelector(".number-btns");
+let operatorBtns = document.querySelector(".operator-btns");
+let clearBtn = document.querySelector(".clear-btn");
+let equalBtn = document.querySelector(".equal-btn");
 
+
+numberBtns.addEventListener("click", (event) => {
+    let target = event.target.innerHTML;
+    if (accumulator === "0"){
+        accumulator = "";
+    }
+    accumulator += target;
+    display.textContent = accumulator;
 });
 
-// updateDisplay()
 
-// operate()
+clearBtn.addEventListener("click", () => {
+    accumulator = "0";
+    display.textContent = accumulator;
+});
+
+
+operatorBtns.addEventListener("click", (event) => {
+    let target = event.target.id;
+    x = Number(accumulator);
+    operator = target;
+    accumulator = "0";
+});
+
+
+equalBtn.addEventListener("click", () => {
+    y = Number(accumulator);
+    //operate(x, y, operator);
+    console.log(`${x}, ${y}, ${operator}`);
+    display.textContent = "RESULT";
+});
+
+
+
+
+function operate(x, y, operator){
+
+}
 
 
 
