@@ -36,6 +36,12 @@ operatorBtns.addEventListener("click", (event) => {
 
 
 equalBtn.addEventListener("click", () => {
+    // saves x in the case we hit "=" before an operator
+    if (!x){
+        x = Number(display.textContent);
+        return
+    }
+
     y = Number(accumulator);
     display.textContent = operate(x, y, operator);
     accumulator = "0";
@@ -44,6 +50,14 @@ equalBtn.addEventListener("click", () => {
 
 function operate(x, y, operator){
     let result;
+
+    // handles errors of clicking "=" to early
+    if (!x){
+        return 0;
+    } else if(!y){
+        return x;
+    }
+
     if (operator === "+"){
         result = x + y;
     } else if (operator === "-"){
