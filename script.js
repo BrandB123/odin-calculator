@@ -16,6 +16,9 @@ numberBtns.addEventListener("click", (event) => {
     if (accumulator === "0"){
         accumulator = "";
     }
+    if (target === "." && accumulator.includes(".")){
+        return
+    }
     accumulator += target;
     display.textContent = accumulator;
 });
@@ -69,7 +72,7 @@ function operate(x, y, operator){
     } else if (operator === "/"){
         result = x / y;
     }
-    // convert to string to round to 6 decimal places
+    // convert to string to round to 6 decimal places. Avoid floating point imprecision & long numbers that overflow the screen
     stringResult = result.toString();
     result = Number(stringResult.slice(0, 8));
 
