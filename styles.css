@@ -9,7 +9,6 @@ body {
 .main-container {
     display: flex;
     flex-direction: column;
-    /*justify-content: center;*/
     align-items: stretch;
     flex: auto;
     border: 1px solid black;
@@ -38,8 +37,6 @@ body {
 
 .button-row {
     display: flex;
-    /*justify-content: center;*/
-    /*align-items: center;*/
     flex: auto;
     gap: 10px;
 }
@@ -49,7 +46,6 @@ button {
     justify-content: center;
     align-items: center;
     flex: auto; 
-    /*gap: 20px;*/
     padding: 10px;
     border: 1px solid black;
     border-radius: 5px;
