@@ -6,6 +6,7 @@ body {
     background-color: #333;
 }
 
+
 .main-container {
     display: flex;
     flex-direction: column;
@@ -17,10 +18,13 @@ body {
     padding: 20px;
     gap: 10px;
     height: 80vh;
-    min-height: 300px;
+    min-height: 400px;
+    max-height: 450px;
     background-color: #fff;
     box-shadow: 0 0 10px rgb(255, 255, 255, 50%);
+    gap: 10px;
 }
+
 
 .display {
     display: flex;
@@ -35,11 +39,51 @@ body {
 
 }
 
-.button-row {
+.btn-container {
+    display: flex;
+    flex: auto;
+    gap: 20px;
+}
+
+
+.number-btns {
+    display: flex;
+    flex-direction: column;
+    flex: 4 1 auto;
+    gap: 10px;
+}
+
+
+.btn-row {
     display: flex;
     flex: auto;
     gap: 10px;
 }
+
+
+.non-number-btns {
+    display: flex;
+    flex-direction: column;
+    flex: 1 4 auto;
+    gap: 10px;
+}
+
+
+.non-operator-btns {
+    display: flex;
+    flex-direction: column;
+    flex: auto;
+    gap: 10px;
+}
+
+
+.operator-btns {
+    display: flex;
+    flex-direction: column;
+    flex: auto;
+    gap: 10px;
+}
+
 
 button {
     display: flex;
