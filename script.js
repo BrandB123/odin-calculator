@@ -39,7 +39,7 @@ operatorBtns.addEventListener("click", (event) => {
 
 equalBtn.addEventListener("click", () => {
     // saves x in the case we hit "=" before an operator
-    if (!x){
+    if (x === "undefined"){
         x = Number(display.textContent);
         return
     }
@@ -54,9 +54,9 @@ function operate(x, y, operator){
     let result;
 
     // handles errors of clicking "=" to early
-    if (!x){
+    if (x === "undefined"){
         return 0;
-    } else if(!y){
+    } else if(y === "undefined"){
         return x;
     }
 
@@ -69,5 +69,9 @@ function operate(x, y, operator){
     } else if (operator === "/"){
         result = x / y;
     }
+    // convert to string to round to 6 decimal places
+    stringResult = result.toString();
+    result = Number(stringResult.slice(0, 8));
+
     return result
 }
